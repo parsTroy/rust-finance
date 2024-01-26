@@ -13,7 +13,7 @@ When the salary is input, it will calculate what portion of the salary should go
 
 ## Installation
 
-***cargo run*** to run it.
+`cargo run` to run it.
 
 ## Usage
 
