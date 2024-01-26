@@ -1,11 +1,12 @@
 import { Button, VerticalBox , LineEdit} from "std-widgets.slint";
 
 export component AppWindow inherits Window {
-
+    
     in property <string> results: "";
     in-out property <bool> openscreen;
     callback calculate-salary(string);
 
+    title: "Rusty Budget Calc";
     background: #123;
     GridLayout {
         padding: 50px;
