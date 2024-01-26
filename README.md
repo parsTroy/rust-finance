@@ -32,4 +32,4 @@ The MIT License
 
 ![rust-finance](https://img.shields.io/github/languages/top/parsTroy/rust-finance)
 
-`## Tests`
+[comment]: <## Tests> 
