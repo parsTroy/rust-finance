@@ -1,0 +1,83 @@
+import { Button, VerticalBox , LineEdit} from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+
+    in property <string> results: "";
+    in-out property <bool> openscreen;
+    callback calculate-salary(string);
+
+    background: #123;
+    GridLayout {
+        padding: 50px;
+        spacing: 32px;
+        Row {
+            Text {
+                text: "Enter Salary";
+                font-size: 32px;
+                font-weight: 700;
+                horizontal-alignment: center;
+            }
+        }
+
+        Row {
+            salary := LineEdit {
+                font-size: 18px;
+                horizontal-alignment: center;
+                placeholder-text: "Salary input";
+                height: 40px;
+            }
+        }
+
+        Row {
+            Button {
+                text: "Calculate";
+                primary: true;
+                height: 40px;
+                clicked => {
+                    root.openscreen = !root.openscreen;
+                    calculate-salary(salary.text)
+                }
+            }
+        }
+
+        Row {
+            VerticalBox {
+                Rectangle {
+                    height: 120px;
+                    background: #efefef;
+                    Text {
+                        color: black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text: root.results;
+                    }
+
+                    // Left Screen
+                    Rectangle {
+                        background: #222222;
+                        x: 0;
+                        width: openscreen ? 0px : parent.width / 2;
+                        height: parent.height;
+                        animate width {
+                             duration: 250ms; easing: ease-in;
+                        }
+                    }
+
+                    // Right Screen
+                    Rectangle {
+                        background: #222222;
+                        x: openscreen ? parent.width : parent.width / 2;
+                        width: openscreen ? 0px : parent.width / 2;
+                        height: parent.height;
+                        animate width {
+                            duration: 250ms; easing: ease-in;
+                        }
+                        animate x {
+                            duration: 250ms; easing: ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
