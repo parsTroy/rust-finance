@@ -11,7 +11,7 @@ When the salary is input, it will calculate what portion of the salary should go
     -- Necessities - 35%
     -- Wants       - 10.5%
     -- Investments - 24.5%
-Including taxes that is how I like to spend 100% of income. ("Does'nt everyone LOVE taxes!!!")
+Including taxes that is how I like to spend 100% of income. ("Doesn't everyone LOVE taxes!!!")
 
 
 - Taxes
