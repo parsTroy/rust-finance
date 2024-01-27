@@ -12,6 +12,8 @@ Then the breakdown is as follows:
 - Wants       - 10.5%
 - Investments - 24.5%
 
+<br />
+
 Including taxes that is how I like to spend 100% of income. ("Doesn't everyone LOVE taxes!!!")
 
 
