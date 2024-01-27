@@ -19,8 +19,8 @@ When the salary is input, it will calculate what portion of the salary should go
 
 Input your salary.
 
-![image](assets/images/screenshot.png)
-![alt text](assets/images/screenshot.png)
+![image](assets/images/program-photo.png)
+![alt text](finance calc image)
 
 ## License
 
