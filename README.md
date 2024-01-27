@@ -17,7 +17,7 @@ When the salary is input, it will calculate what portion of the salary should go
 
 ## Usage
 
-Input your salary.
+Input your salary, and receieve a calculation of how to budget your income.
 
 ![Alt text](assets/program-photo.png "Photo of Rust Budget Calculator")
 
