@@ -8,9 +8,9 @@ When the salary is input, it will calculate what portion of the salary should go
 
 Where I live it's roughly 30% Tax, that is taken into account. <br />
 Then the breakdown is as follows: <br />
-    -- Necessities - 35% <br />
-    -- Wants       - 10.5% <br />
-    -- Investments - 24.5% <br />
+    - Necessities - 35% <br />
+    - Wants       - 10.5% <br />
+    - Investments - 24.5% <br />
 Including taxes that is how I like to spend 100% of income. ("Doesn't everyone LOVE taxes!!!")
 
 
