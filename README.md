@@ -19,7 +19,6 @@ When the salary is input, it will calculate what portion of the salary should go
 
 Input your salary.
 
-![image](assets/program-photo.png)
 ![Alt text](assets/program-photo.png "Photo of Rust Budget Calculator")
 
 ## License
