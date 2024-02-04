@@ -6,10 +6,15 @@ This is a small desktop app created in Rust, with Slint.
 I made this for budgeting my annual salary to follow a modified version of the 50/30/20 Rule.
 When the salary is input, it will calculate what portion of the salary should go in the following categories.
 
-- Taxes
-- Necessities
-- Wants
-- Investments
+Where I live it's roughly 30% Tax, that is taken into account. <br />
+Then the breakdown is as follows:
+- Necessities - 35%
+- Wants       - 10.5%
+- Investments - 24.5%
+
+<br />
+
+Including taxes that is how I like to spend 100% of income. ("Doesn't everyone LOVE taxes!!!");
 
 ## Installation
 
@@ -17,10 +22,9 @@ When the salary is input, it will calculate what portion of the salary should go
 
 ## Usage
 
-Input your salary.
+Input your salary, and receieve a calculation of how to budget your income.
 
-![image](assets/images/screenshot.png)
-![alt text](assets/images/screenshot.png)
+![Alt text](assets/program-photo.png "Photo of Rust Budget Calculator")
 
 ## License
 
