@@ -4,7 +4,7 @@ export component AppWindow inherits Window {
     
     in property <string> results: "";
     in-out property <bool> openscreen;
-    callback calculate-salary(string);
+    callback calculate-salary(string, string, string);
 
     title: "Rusty Budget Calc";
     background: #123;
@@ -39,7 +39,7 @@ export component AppWindow inherits Window {
         }
 
         Row {
-            return := LineEdit {
+            percentage := LineEdit {
                 font-size: 18px;
                 horizontal-alignment: center;
                 placeholder-text: "Expected Return (%)";
@@ -71,8 +71,8 @@ export component AppWindow inherits Window {
                 primary: true;
                 height: 40px;
                 clicked => {
-                    root.openscreen = !root.openscreen;
-                    calculate-salary(salary.text)
+                    // root.openscreen = !root.openscreen;
+                    calculate-salary(salary.text, percentage.text, years.text);
                 }
             }
         }
@@ -89,30 +89,30 @@ export component AppWindow inherits Window {
                         text: root.results;
                     }
 
-                    // Left Screen
-                    Rectangle {
-                        background: #222222;
-                        x: 0;
-                        width: openscreen ? 0px : parent.width / 2;
-                        height: parent.height;
-                        animate width {
-                             duration: 250ms; easing: ease-in;
-                        }
-                    }
+                    // // Left Screen
+                    // Rectangle {
+                    //     background: #222222;
+                    //     x: 0;
+                    //     width: openscreen ? 0px : parent.width / 2;
+                    //     height: parent.height;
+                    //     animate width {
+                    //          duration: 250ms; easing: ease-in;
+                    //     }
+                    // }
 
-                    // Right Screen
-                    Rectangle {
-                        background: #222222;
-                        x: openscreen ? parent.width : parent.width / 2;
-                        width: openscreen ? 0px : parent.width / 2;
-                        height: parent.height;
-                        animate width {
-                            duration: 250ms; easing: ease-in;
-                        }
-                        animate x {
-                            duration: 250ms; easing: ease-in;
-                        }
-                    }
+                    // // Right Screen
+                    // Rectangle {
+                    //     background: #222222;
+                    //     x: openscreen ? parent.width : parent.width / 2;
+                    //     width: openscreen ? 0px : parent.width / 2;
+                    //     height: parent.height;
+                    //     animate width {
+                    //         duration: 250ms; easing: ease-in;
+                    //     }
+                    //     animate x {
+                    //         duration: 250ms; easing: ease-in;
+                    //     }
+                    // }
                 }
             }
         }
