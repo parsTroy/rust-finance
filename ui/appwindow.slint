@@ -24,7 +24,43 @@ export component AppWindow inherits Window {
             salary := LineEdit {
                 font-size: 18px;
                 horizontal-alignment: center;
-                placeholder-text: "Salary input";
+                placeholder-text: "Expected Salary ($)";
+                height: 40px;
+            }
+        }
+
+        Row {
+            Text {
+                text: "Enter Expected Rate of Return";
+                font-size: 20px;
+                font-weight: 700;
+                horizontal-alignment: center;
+            }
+        }
+
+        Row {
+            return := LineEdit {
+                font-size: 18px;
+                horizontal-alignment: center;
+                placeholder-text: "Expected Return (%)";
+                height: 40px;
+            }
+        }
+
+        Row {
+            Text {
+                text: "Enter Investment Period";
+                font-size: 20px;
+                font-weight: 700;
+                horizontal-alignment: center;
+            }
+        }
+
+        Row {
+            years := LineEdit {
+                font-size: 18px;
+                horizontal-alignment: center;
+                placeholder-text: "Expected Time Horizon (Years)";
                 height: 40px;
             }
         }
