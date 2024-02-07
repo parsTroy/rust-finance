@@ -22,13 +22,13 @@ Including taxes that is how I like to spend 100% of income. ("Doesn't everyone L
 
 ## Usage
 
-Input your salary, and receieve a calculation of how to budget your income.
+Input your salary, and receieve a calculation of how to budget your income.<br />
+<br />
+Input your Current Investment Value (can be $0).<br />
+Input your expected rate of return (whole integer).<br />
+Input your investment period in years.<br />
 
-Input your Current Investment Value (can be $0).
-Input your expected rate of return (whole integer).
-Input your investment period in years.
-
-These inputs will then be combined, with the recommended investment amount based off a portion of your annual salary.
+These inputs will then be combined, with the recommended investment amount based off a portion of your annual salary.<br />
 
 ![Alt text](assets/program-photo.png "Photo of Rust Budget Calculator")
 
