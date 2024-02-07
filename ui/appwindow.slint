@@ -4,7 +4,7 @@ export component AppWindow inherits Window {
     
     in property <string> results: "";
     in-out property <bool> openscreen;
-    callback calculate-salary(string, string, string);
+    callback calculate-salary(string, string, string, string);
 
     title: "Rusty Budget Calc";
     background: #123;
@@ -25,6 +25,24 @@ export component AppWindow inherits Window {
                 font-size: 18px;
                 horizontal-alignment: center;
                 placeholder-text: "Expected Salary ($)";
+                height: 40px;
+            }
+        }
+
+        Row {
+            Text {
+                text: "Enter Starting Value";
+                font-size: 20px;
+                font-weight: 700;
+                horizontal-alignment: center;
+            }
+        }
+
+        Row {
+            initial := LineEdit {
+                font-size: 18px;
+                horizontal-alignment: center;
+                placeholder-text: "Initial Investment ($)";
                 height: 40px;
             }
         }
@@ -72,7 +90,7 @@ export component AppWindow inherits Window {
                 height: 40px;
                 clicked => {
                     // root.openscreen = !root.openscreen;
-                    calculate-salary(salary.text, percentage.text, years.text);
+                    calculate-salary(salary.text, initial.text, percentage.text, years.text);
                 }
             }
         }
