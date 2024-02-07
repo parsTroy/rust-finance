@@ -16,6 +16,6 @@ slint = "1.3"
 slint-build = "1.3"
 
 [package.metadata.bundle]
-name = "Rusty Budget Calc"
+name = "Rusty Fire Calc"
 identifier = "io.github.parsTroy.rust-finance"
 icon = ["./icon.png", "./icon@2x.png"]
