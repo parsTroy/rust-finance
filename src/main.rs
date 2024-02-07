@@ -1,5 +1,4 @@
 use financial;
-use thousands::Separable;
 slint::include_modules!();
 
 const TAX_CLAW: f64 = 0.30;
