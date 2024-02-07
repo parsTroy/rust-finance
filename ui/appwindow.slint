@@ -1,4 +1,4 @@
-import { Button, VerticalBox , LineEdit} from "std-widgets.slint";
+import { Button, VerticalBox, LineEdit} from "std-widgets.slint";
 
 export component AppWindow inherits Window {
     
@@ -18,14 +18,12 @@ export component AppWindow inherits Window {
                 font-weight: 700;
                 horizontal-alignment: center;
             }
-        }
-
-        Row {
             salary := LineEdit {
                 font-size: 18px;
                 horizontal-alignment: center;
                 placeholder-text: "Expected Salary ($)";
                 height: 40px;
+                min-width: 185px;
             }
         }
 
@@ -36,14 +34,12 @@ export component AppWindow inherits Window {
                 font-weight: 700;
                 horizontal-alignment: center;
             }
-        }
-
-        Row {
             initial := LineEdit {
                 font-size: 18px;
                 horizontal-alignment: center;
                 placeholder-text: "Initial Investment ($)";
                 height: 40px;
+                min-width: 100px;
             }
         }
 
@@ -54,14 +50,12 @@ export component AppWindow inherits Window {
                 font-weight: 700;
                 horizontal-alignment: center;
             }
-        }
-
-        Row {
             percentage := LineEdit {
                 font-size: 18px;
                 horizontal-alignment: center;
                 placeholder-text: "Expected Return (%)";
                 height: 40px;
+                min-width: 100px;
             }
         }
 
@@ -72,65 +66,36 @@ export component AppWindow inherits Window {
                 font-weight: 700;
                 horizontal-alignment: center;
             }
-        }
-
-        Row {
             years := LineEdit {
                 font-size: 18px;
                 horizontal-alignment: center;
-                placeholder-text: "Expected Time Horizon (Years)";
+                placeholder-text: "Time Horizon (Years)";
                 height: 40px;
-            }
-        }
-
-        Row {
-            Button {
-                text: "Calculate";
-                primary: true;
-                height: 40px;
-                clicked => {
-                    // root.openscreen = !root.openscreen;
-                    calculate-salary(salary.text, initial.text, percentage.text, years.text);
-                }
+                min-width: 100px;
             }
         }
 
         Row {
             VerticalBox {
                 Rectangle {
-                    height: 120px;
+                    height: 140px;
                     background: #efefef;
                     Text {
                         color: black;
                         font-size: 16px;
                         font-weight: 500;
+                        horizontal-alignment: center;
                         text: root.results;
                     }
+                }
+            }
 
-                    // // Left Screen
-                    // Rectangle {
-                    //     background: #222222;
-                    //     x: 0;
-                    //     width: openscreen ? 0px : parent.width / 2;
-                    //     height: parent.height;
-                    //     animate width {
-                    //          duration: 250ms; easing: ease-in;
-                    //     }
-                    // }
-
-                    // // Right Screen
-                    // Rectangle {
-                    //     background: #222222;
-                    //     x: openscreen ? parent.width : parent.width / 2;
-                    //     width: openscreen ? 0px : parent.width / 2;
-                    //     height: parent.height;
-                    //     animate width {
-                    //         duration: 250ms; easing: ease-in;
-                    //     }
-                    //     animate x {
-                    //         duration: 250ms; easing: ease-in;
-                    //     }
-                    // }
+            Button {
+                text: "Calculate";
+                primary: true;
+                height: 50px;
+                clicked => {
+                    calculate-salary(salary.text, initial.text, percentage.text, years.text);
                 }
             }
         }

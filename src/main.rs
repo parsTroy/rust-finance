@@ -1,4 +1,5 @@
-
+use financial;
+use thousands::Separable;
 slint::include_modules!();
 
 const TAX_CLAW: f64 = 0.30;
@@ -24,9 +25,9 @@ fn main() -> Result<(), slint::PlatformError> {
             let rate_percent: f64 = rate.trim().parse().unwrap(); // RATE WHOLE NUMBER
             let time_horizon: f64 = years.trim().parse().unwrap(); // YEARS INVESTED
             
-            
+            let fv = financial::fv(rate_percent / 100.0, time_horizon, Some(invest), Some(initial_value), Some(true));
 
-            let result = format!("Taxes: {:.2}\nNeeds: {:.2}\nWants: {:.2}\n Invest: {:.2}\n Future Value: {:.2}", tax, need, want, invest, fv);
+            let result = format!("Taxes: {:.2}\nNeeds: {:.2}\nWants: {:.2}\n Invest: {:.2}\n\n Future Value: ${:.2}", tax, need, want, invest, -fv);
             ui.set_results(result.into());
         }
     });
