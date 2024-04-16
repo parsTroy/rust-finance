@@ -1,4 +1,4 @@
-# Rusty Budget Calc
+# Rusty Finance
 
 ## Description
 
